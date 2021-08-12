@@ -1,11 +1,13 @@
 import './App.css';
-import Home from "./components/Home";
 import React from "react";
+import {useRoutes} from "hookrouter";
+import routes from "./utils/Routes";
 
 function App() {
+    const routeResult = useRoutes(routes);
   return (
       <div className="App">
-          <Home/>
+          {routeResult}
           <footer>
               <div>Copyright</div>
           </footer>
