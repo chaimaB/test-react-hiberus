@@ -9,7 +9,7 @@ function Popup({ selected, closePopup }) {
         <section className="popup">
             <div className="content d-flex flex-row">
                 <div className="plot">
-                    <img src={`${Constants.IMAGE_URL}/${selected.poster_path}`} />
+                    <img src={`${Constants.IMAGE_URL}/${selected.poster_path}`} alt={selected.title}/>
                 </div>
                 <div className="d-flex flex-column justify-content-between">
                     <div>

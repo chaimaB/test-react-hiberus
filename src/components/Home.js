@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import {useRoutes, A} from 'hookrouter';
-
 import Search from '../components/SearchBar';
 import MoviesGrid from '../components/GridItems';
 
@@ -8,12 +6,10 @@ import Get from '../api/listApi';
 import Constants from '../utils/Constants';
 import useSearch from '../hooks/useSearch';
 import Popup from "./Popup";
-import routes from "../utils/Routes";
 
 Constants.FuseOptions.keys = ['title', 'release_date'];
 
 function Home() {
-    const routeResult = useRoutes(routes);
     const [movies, setMovies] = useState({});
     const [movieType, setMovieType] = useState();
     const [state, setState] = useState({
@@ -38,7 +34,7 @@ function Home() {
         }
     }, []);
 
-    const fetch = async what => {
+    /*const fetch = async what => {
         const split = what.split(' ');
         const type = split.reduce((acc, curr, i) => {
             return acc
@@ -54,7 +50,7 @@ function Home() {
             });
         }
         setMovieType(type);
-    };
+    };*/
 
     const openPopup = id => {
         Get.movies(id).then(({ data }) => {
@@ -106,7 +102,11 @@ function Home() {
             }
         }
     };
+    const redirectToLogin = () => {
+        window.location.href = '/login';
+    };
 
+    const user = localStorage.getItem('user');
     return (
         <div className="main-section">
 
@@ -141,7 +141,7 @@ function Home() {
                         </select>
                         
                         <div className="pt-4 mr-3">
-                            <A href="/login">Login</A>
+                            <button className="btn btn-link p-0" onClick={redirectToLogin}>{user === null ? 'Login' : 'Logout'}</button>
                         </div>
                     </div>
                 </div>

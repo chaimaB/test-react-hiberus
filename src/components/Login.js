@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
-// import { withRouter } from "react-router-dom";
 
-function LoginForm(props) {
+function LoginForm() {
     const [state , setState] = useState({
         email : "",
         password : "",
@@ -17,10 +16,6 @@ function LoginForm(props) {
 
     const handleSubmitClick = (e) => {
         e.preventDefault();
-        const payload={
-            "email":state.email,
-            "password":state.password,
-        };
         if(state.email === "admin" || state.email === "chaima"){
             setState(prevState => ({
                 ...prevState,
@@ -28,20 +23,19 @@ function LoginForm(props) {
             }));
             localStorage.setItem('user',state.email);
             redirectToHome();
-            props.showError(null)
         }
         else if(state.password !== "123"){
-            props.showError("Username and password do not match");
+            alert("Username and password do not match");
         }
         else{
-            props.showError("Username does not exists");
+            alert("Username does not exists");
         }
     };
     const redirectToHome = () => {
-        props.history.push('/home');
+        window.location.href = '/';
     };
     return(
-        <div className="card col-12 col-lg-4 login-card mt-2 hv-center">
+        <div className="ml-5 card col-9 col-lg-4 login-card mt-2 hv-center">
             <form>
                 <div className="form-group text-left">
                     <label htmlFor="exampleInputEmail1">Email address or username</label>

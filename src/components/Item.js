@@ -1,6 +1,5 @@
-import React, {useState} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import Popup from "./Popup";
 
 function Item({ id, image, title, overview, ratings, openPopup }) {
     return (
