@@ -7,9 +7,10 @@ Test demanded by Hiberus Tecnologia.
 
 ### Project description:  
 
-This was a 1 week long project built for Hiberus Tecnologia. Project goals included using technologies learned up until this point and familiarizing myself with documentation for new features.  
+This was a 1 week long project built for Hiberus Tecnologia. Project goals included using technologies learned up until this point and familiarizing myself with documentation about the project i've created.  
 
-I started this process by using the `create-react-app` boilerplate, then adding `hookrouter`, `react-icons`, `fuse.js`, `prop-types` and `axios` in order to fetch data from the open API movies library `https://developers.themoviedb.org/3/`.  
+I started this process by using the `create-react-app` boilerplate, then adding `react-dom`, `react-icons`, `fuse.js`, `prop-types` and `axios` in order to fetch data from the open API movies library `https://developers.themoviedb.org/3/`. 
+In order to test the login part of this app, you need to connect using the username `admin` or `chaima` and in both cases `123` as password.
 
 ![image](https://user-images.githubusercontent.com/24367625/129138004-e93f2935-55e7-4577-8c24-a99bb4302c04.png)
 
@@ -27,6 +28,11 @@ my-app/
     index.html
     favicon.ico
     logo.png
+    robots.txt
+    manifest.json
+    logo192.png
+    logo.png
+    logo512.png
   api/
     listApi.js
   src/
@@ -48,6 +54,8 @@ my-app/
     index.css
     index.js
     logo.svg
+    reportWebVitals.js
+    setupTests.js
 ```
 
 For the project to build, **these files must exist with exact filenames**:
