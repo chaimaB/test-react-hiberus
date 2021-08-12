@@ -11,6 +11,9 @@ This was a 1 week long project built for Hiberus Tecnologia. Project goals inclu
 
 I started this process by using the `create-react-app` boilerplate, then adding `hookrouter`, `react-icons`, `fuse.js`, `prop-types` and `axios` in order to fetch data from the open API movies library `https://developers.themoviedb.org/3/`.  
 
+![image](https://user-images.githubusercontent.com/24367625/129138004-e93f2935-55e7-4577-8c24-a99bb4302c04.png)
+
+
  ## Folder Structure
 
 After creation, your project should look like this:
